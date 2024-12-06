@@ -21,5 +21,7 @@ class Post(models.Model):
     categories = models.ManyToManyField(Category, related_name='posts')  
     author = models.ForeignKey(User, on_delete=models.CASCADE)  
 
+    # list_idisplay  für filtering -> Recherche
+
     def __str__(self):
         return self.title
